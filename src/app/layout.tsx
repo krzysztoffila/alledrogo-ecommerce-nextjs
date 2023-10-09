@@ -4,8 +4,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "SuitShop",
-  description: "Kup Garnitur na kazdą okazję",
+  title: "Alledrogo",
+  description: "Kroimy cię z portfela",
 };
 
 export default function RootLayout({

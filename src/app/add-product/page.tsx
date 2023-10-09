@@ -2,7 +2,7 @@ import { prisma } from "@/lib/db/prisma";
 import { redirect } from "next/navigation";
 
 export const metadata = {
-  title: "Add Product - SuitShop",
+  title: "Add Product - Alledrogo",
 };
 
 async function addProduct(formData: FormData) {
