@@ -15,7 +15,7 @@ export default async function ProductPage({
   const product = await prisma.product.findUnique({ where: { id } });
   if (!product) notFound();
   return (
-    <div className="flex flex-col lg:flex-row">
+    <div className="flex flex-col gap-4 lg:flex-row">
       <Image
         src={product.imageUrl}
         alt={product.name}
