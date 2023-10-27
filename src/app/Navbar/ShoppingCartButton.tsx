@@ -1,3 +1,5 @@
+"use client"
+
 import { ShoppingCart } from "@/lib/db/cart";
 import { formatPrice } from "@/lib/format";
 import Link from "next/link";
@@ -7,6 +9,14 @@ interface ShoppingCartButtonProps {
 }
 
 export default function ShoppingCartButton({ cart }: ShoppingCartButtonProps) {
+
+    function closeDropdown() {
+        const elem = document.activeElement as HTMLElement
+        if (elem) {
+            elem.blur();
+        }
+    }
+
     return (
         <div className="dropdown-end dropdown">
             <label tabIndex={0} className="btn-ghost btn-circle btn">
@@ -41,6 +51,7 @@ export default function ShoppingCartButton({ cart }: ShoppingCartButtonProps) {
                         <Link
                             href="/cart"
                             className="btn btn-primary btn-block"
+                            onClick={closeDropdown}
                         >
                             View cart
                         </Link>

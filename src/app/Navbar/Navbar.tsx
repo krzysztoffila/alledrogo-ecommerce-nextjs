@@ -1,8 +1,8 @@
+import logo from "@/assets/logo.png";
+import { getCart } from "@/lib/db/cart";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "@/assets/logo.png";
-import { redirect } from "next/dist/server/api-utils";
-import { getCart } from "@/lib/db/cart";
+import { redirect } from "next/navigation";
 import ShoppingCartButton from "./ShoppingCartButton";
 
 async function searchProducts(formData: FormData) {
@@ -17,12 +17,13 @@ async function searchProducts(formData: FormData) {
 
 export default async function Navbar() {
   const cart = await getCart();
+
   return (
     <div className="bg-base-100">
       <div className="navbar m-auto max-w-7xl flex-col gap-2 sm:flex-row">
         <div className="flex-1">
           <Link href="/" className="btn-ghost btn text-xl normal-case">
-            <Image src={logo} height={40} width={40} alt="Alledrogo" />
+            <Image src={logo} height={40} width={40} alt="Alledrogo logo" />
             Alledrogo
           </Link>
         </div>
