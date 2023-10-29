@@ -4,14 +4,21 @@ import { CartItemWithProduct } from "@/lib/db/cart";
 import { formatPrice } from "@/lib/format";
 import Image from "next/image";
 import Link from "next/link";
+import { useTransition } from "react";
 
 interface CartEntryProps {
     cartItem: CartItemWithProduct,
+    setProductQuanitity: (productId: string, quantity: number) => Promise<void>
 }
 
-export default function CartEntry({ cartItem: { product, quantity } }: CartEntryProps) {
+export default function CartEntry({
+    cartItem: { product, quantity },
+    setProductQuanitity,
+}: CartEntryProps) {
 
+    const [isPending, startTransition] = useTransition();
     const quantityOptions: JSX.Element[] = [];
+
     for (let i = 1; i <= 10; i++) {
         quantityOptions.push(
             <option value={i} key={i}>
@@ -42,15 +49,20 @@ export default function CartEntry({ cartItem: { product, quantity } }: CartEntry
                         <select
                             className="select select-bordered w-full max-w-[80px]"
                             defaultValue={quantity}
-                            onChange={e => {
-
+                            onChange={(e) => {
+                                const newQuantity = parseInt(e.currentTarget.value);
+                                startTransition(async () => {
+                                    await setProductQuanitity(product.id, newQuantity);
+                                })
                             }}
                         >
+                            <option value={0}>0 (Remove)</option>
                             {quantityOptions}
                         </select>
                     </div>
                     <div className="flex items-center gap-3">
                         Total: {formatPrice(product.price * quantity)}
+                        {isPending && <span className="loading loading-spinner loading-sm" />}
                     </div>
                 </div>
             </div>
