@@ -1,3 +1,25 @@
+# Projekt E-commerce z Next.js 13.4
+
+Ten projekt jest częścią kursu, w ramach którego miałem okazję zgłębić różne technologie i narzędzia związane z tworzeniem aplikacji internetowych. Głównym celem projektu było zrozumienie działania następujących technologii:
+
+- **Next.js:** Użyłem najnowszej wersji (13.4) Next.js, aby tworzyć zarówno stronę klienta, jak i serwerową.
+
+- **Prisma:** Wykorzystałem Prisma do zarządzania bazą danych, co pozwoliło mi efektywnie budować aplikację.
+
+- **app router:** Zaimplementowałem nowy app router, aby zapewnić nawigację w aplikacji.
+
+- **Next-Auth:** Zajmowałem się bezpieczeństwem użytkownika, korzystając z Next-Auth oraz autoryzacji przez Google.
+
+- **MongoDB:** Wybrałem MongoDB jako bazę danych dla projektu.
+
+- **TailwindCSS i DaisyUI:** Poprawiłem UX, projektując responsywne i estetyczne UI.
+
+- **React cache:** Optymalizowałem zapytania do bazy danych z wykorzystaniem React cache.
+
+- **Narzędzia deweloperskie:** Skonfigurowałem różne narzędzia, które ułatwiły mi pracę podczas tworzenia projektu.
+
+Ten projekt ma na celu nie tylko wykazanie moich umiejętności w zakresie tworzenia aplikacji internetowych, ale również naukę i eksperymentowanie z nowymi technologiami. Jestem gotów na dalszy rozwój i ulepszanie tego projektu, a także na dalsze wyzwania związane z programowaniem i projektowaniem aplikacji webowych.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
