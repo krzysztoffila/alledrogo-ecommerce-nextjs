@@ -1,79 +1,68 @@
-import FormSubmitButton from "@/components/FormSubmitButton";
+import PaginationBar from "@/components/PaginationBar";
+import ProductCard from "@/components/ProductCard";
 import { prisma } from "@/lib/db/prisma";
-import { getServerSession } from "next-auth";
-import { redirect } from "next/navigation";
-import { authOptions } from "../api/auth/[...nextauth]/route";
+import Image from "next/image";
+import Link from "next/link";
 
-export const metadata = {
-  title: "Add Product - Alledrogo",
-};
-
-async function addProduct(formData: FormData) {
-  "use server";
-
-  const session = await getServerSession(authOptions);
-  if (!session) {
-    redirect("/api/auth/signin?callbackUrl=/add-product")
-  }
-
-  const name = formData.get("name")?.toString();
-  const description = formData.get("description")?.toString();
-  const imageUrl = formData.get("imageUrl")?.toString();
-  const price = Number(formData.get("price") || 0);
-
-  if (!name || !description || !imageUrl || !price) {
-    throw Error("Missing required fields");
-  }
-  await prisma.product.create({
-    data: {
-      name,
-      description,
-      imageUrl,
-      price,
-    },
-  });
-  redirect("/");
+interface HomeProps {
+  searchParams: { page: string };
 }
 
-export default async function AddProductPage() {
+export default async function Home({
+  searchParams: { page = "1" },
+}: HomeProps) {
+  const currentPage = parseInt(page);
 
-  const session = await getServerSession(authOptions);
-  if (!session) {
-    redirect("/api/auth/signin?callbackUrl=/add-product")
-  }
+  const pageSize = 6;
+  const heroItemCount = 1;
+
+  const totalItemCount = await prisma.product.count();
+
+  const totalPages = Math.ceil((totalItemCount - heroItemCount) / pageSize);
+
+  const products = await prisma.product.findMany({
+    orderBy: { id: "desc" },
+    skip:
+      (currentPage - 1) * pageSize + (currentPage === 1 ? 0 : heroItemCount),
+    take: pageSize + (currentPage === 1 ? heroItemCount : 0),
+  });
 
   return (
-    <div>
-      <h1 className="mb-3 text-lg font-bold">Add product</h1>
-      <form action={addProduct}>
-        <input
-          required
-          name="name"
-          placeholder="name"
-          className="input-bordered input mb-3 w-full"
-        />
-        <textarea
-          required
-          name="description"
-          placeholder="Description"
-          className="textarea-bordered textarea mb-3 w-full"
-        ></textarea>
-        <input
-          required
-          name="imageUrl"
-          placeholder="Image URL"
-          type="url"
-          className="input-bordered input mb-3 w-full"
-        />
-        <input
-          required
-          name="price"
-          placeholder="price"
-          type="number"
-          className="input-bordered input mb-3 w-full"
-        />
-        <FormSubmitButton className="btn-block">Add Product</FormSubmitButton>
-      </form>
+    <div className="flex flex-col items-center">
+      {currentPage === 1 && (
+        <div className="hero rounded-xl bg-base-200">
+          <div className="hero-content flex-col lg:flex-row">
+            <Image
+              src={products[0].imageUrl}
+              alt={products[0].name}
+              width={400}
+              height={800}
+              className="w-full max-w-sm rounded-lg shadow-2xl"
+              priority
+            />
+            <div>
+              <h1 className="text-5xl font-bold">{products[0].name}</h1>
+              <p className="py-6">{products[0].description}</p>
+              <Link
+                href={"/products/" + products[0].id}
+                className="btn-primary btn"
+              >
+                Check it out
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="my-4 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {(currentPage === 1 ? products.slice(1) : products).map((product) => (
+          <ProductCard product={product} key={product.id} />
+        ))}
+      </div>
+
+      {totalPages > 1 && (
+        <PaginationBar currentPage={currentPage} totalPages={totalPages} />
+      )}
     </div>
   );
 }
