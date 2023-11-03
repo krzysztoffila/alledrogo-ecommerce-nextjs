@@ -12,6 +12,8 @@ Ten projekt jest częścią kursu, w ramach którego miałem okazję zgłębić 
 
 - **MongoDB:** Wybrałem MongoDB jako bazę danych dla projektu.
 
+- **Vercel:** Wdrożyłem projekt na platformę Vercel, aby był dostępny dla użytkowników.
+
 - **TailwindCSS i DaisyUI:** Poprawiłem UX, projektując responsywne i estetyczne UI.
 
 - **React cache:** Optymalizowałem zapytania do bazy danych z wykorzystaniem React cache.
@@ -34,7 +36,7 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [https://alledrogo-ecommerce-nextjs.vercel.app](https://alledrogo-ecommerce-nextjs.vercel.app) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
