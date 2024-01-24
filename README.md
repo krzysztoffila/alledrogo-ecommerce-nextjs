@@ -1,26 +1,26 @@
-# Projekt E-commerce z Next.js 13.4
+# E-commerce Project with Next.js 13.4
 
-Ten projekt jest częścią kursu, w ramach którego miałem okazję zgłębić różne technologie i narzędzia związane z tworzeniem aplikacji internetowych. Głównym celem projektu było zrozumienie działania następujących technologii:
+This project is part of a course where I had the opportunity to delve into various technologies and tools related to web application development. The main goal of the project was to understand the workings of the following technologies:
 
-- **Next.js:** Użyłem najnowszej wersji (13.4) Next.js, aby tworzyć zarówno stronę klienta, jak i serwerową.
+- **Next.js:** I used the latest version (13.4) of Next.js to build both the client and server-side of the application.
 
-- **Prisma:** Wykorzystałem Prisma do zarządzania bazą danych, co pozwoliło mi efektywnie budować aplikację.
+- **Prisma:** I utilized Prisma for database management, enabling efficient application development.
 
-- **app router:** Zaimplementowałem nowy app router, aby zapewnić nawigację w aplikacji.
+- **App Router:** I implemented the new app router to provide navigation within the application.
 
-- **Next-Auth:** Zajmowałem się bezpieczeństwem użytkownika, korzystając z Next-Auth oraz autoryzacji przez Google.
+- **Next-Auth:** I addressed user security using Next-Auth and Google authorization.
 
-- **MongoDB:** Wybrałem MongoDB jako bazę danych dla projektu.
+- **MongoDB:** I chose MongoDB as the database for the project.
 
-- **Vercel:** Wdrożyłem projekt na platformę Vercel, aby był dostępny dla użytkowników.
+- **Vercel:** I deployed the project on the Vercel platform to make it accessible to users.
 
-- **TailwindCSS i DaisyUI:** Poprawiłem UX, projektując responsywne i estetyczne UI.
+- **TailwindCSS and DaisyUI:** I improved the user experience by designing responsive and aesthetically pleasing UI.
 
-- **React cache:** Optymalizowałem zapytania do bazy danych z wykorzystaniem React cache.
+- **React Cache:** I optimized database query requests using React Cache.
 
-- **Narzędzia deweloperskie:** Skonfigurowałem różne narzędzia, które ułatwiły mi pracę podczas tworzenia projektu.
+- **Developer Tools:** I configured various tools that facilitated my work during the project development.
 
-Ten projekt ma na celu nie tylko wykazanie moich umiejętności w zakresie tworzenia aplikacji internetowych, ale również naukę i eksperymentowanie z nowymi technologiami. Jestem gotów na dalszy rozwój i ulepszanie tego projektu, a także na dalsze wyzwania związane z programowaniem i projektowaniem aplikacji webowych.
+This project aims not only to showcase my skills in web application development but also to learn and experiment with new technologies. I am ready for further development and improvement of this project, as well as facing new challenges in programming and designing web applications.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
