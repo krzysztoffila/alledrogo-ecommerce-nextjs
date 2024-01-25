@@ -1,6 +1,11 @@
 [ENGLISH](#english)
-[DEUTSCH](#DE)
+
+[DEUTSCH](#deutsch)
+
 [POLSKI](#polski)
+
+[Getting Started](#getting-started)
+
 
 ## ENGLISH
 
@@ -29,6 +34,59 @@ This project is part of a course where I had the opportunity to delve into vario
 This project aims not only to showcase my skills in web application development but also to learn and experiment with new technologies. I am ready for further development and improvement of this project, as well as facing new challenges in programming and designing web applications.
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## DEUTSCH
+
+# E-Commerce-Projekt mit Next.js 13.4
+
+Dieses Projekt ist Teil eines Kurses, in dem ich die Möglichkeit hatte, mich mit verschiedenen Technologien und Tools im Bereich der Webanwendungs­entwicklung auseinanderzusetzen. Das Hauptziel des Projekts war das Verständnis für die Funktionsweise der folgenden Technologien:
+
+- **Next.js:** Ich habe die neueste Version (13.4) von Next.js verwendet, um sowohl die Client- als auch die Serverseite der Anwendung zu erstellen.
+
+- **Prisma:** Ich habe Prisma für das Datenbankmanagement genutzt, um eine effiziente Anwendungsentwicklung zu ermöglichen.
+
+- **App Router:** Ich habe den neuen App-Router implementiert, um die Navigation innerhalb der Anwendung zu ermöglichen.
+
+- **Next-Auth:** Ich habe mich um die Benutzersicherheit mit Next-Auth und der Google-Autorisierung gekümmert.
+
+- **MongoDB:** Ich habe mich für MongoDB als Datenbank für das Projekt entschieden.
+
+- **Vercel:** Ich habe das Projekt auf der Vercel-Plattform bereitgestellt, um es für Benutzer zugänglich zu machen.
+
+- **TailwindCSS und DaisyUI:** Ich habe das Benutzererlebnis verbessert, indem ich ein ansprechendes und ästhetisch ansprechendes UI entworfen habe.
+
+- **React Cache:** Ich habe Datenbankabfrageanfragen mit React Cache optimiert.
+
+- **Entwicklertools:** Ich habe verschiedene Tools konfiguriert, die meine Arbeit während der Projektentwicklung erleichtert haben.
+
+Dieses Projekt zielt nicht nur darauf ab, meine Fähigkeiten in der Webanwendungsentwicklung zu präsentieren, sondern auch, neue Technologien zu lernen und zu experimentieren. Ich bin bereit für die weitere Entwicklung und Verbesserung dieses Projekts sowie für das Annehmen neuer Herausforderungen in der Programmierung und Gestaltung von Webanwendungen.
+
+## POLSKI
+
+# Projekt E-commerce z Next.js 13.4
+
+ Ten projekt jest częścią kursu, w ramach którego miałem okazję zgłębić różne technologie i narzędzia związane z tworzeniem aplikacji internetowych. Głównym celem projektu było zrozumienie działania następujących technologii:
+
+ - **Next.js:** Użyłem najnowszej wersji (13.4) Next.js, aby tworzyć zarówno stronę klienta, jak i serwerową.
+
+ - **Prisma:** Wykorzystałem Prisma do zarządzania bazą danych, co pozwoliło mi efektywnie budować aplikację.
+
+ - **app router:** Zaimplementowałem nowy app router, aby zapewnić nawigację w aplikacji.
+
+ - **Next-Auth:** Zajmowałem się bezpieczeństwem użytkownika, korzystając z Next-Auth oraz autoryzacji przez Google.
+
+ - **MongoDB:** Wybrałem MongoDB jako bazę danych dla projektu.
+
+ - **Vercel:** Wdrożyłem projekt na platformę Vercel, aby był dostępny dla użytkowników.
+
+ - **TailwindCSS i DaisyUI:** Poprawiłem UX, projektując responsywne i estetyczne UI.
+
+ - **React cache:** Optymalizowałem zapytania do bazy danych z wykorzystaniem React cache.
+
+ - **Narzędzia deweloperskie:** Skonfigurowałem różne narzędzia, które ułatwiły mi pracę podczas tworzenia projektu.
+
+ Ten projekt ma na celu nie tylko wykazanie moich umiejętności w zakresie tworzenia aplikacji internetowych, ale również naukę i eksperymentowanie z nowymi technologiami. Jestem gotów na dalszy rozwój i ulepszanie tego projektu, a także na dalsze wyzwania związane z programowaniem i projektowaniem aplikacji webowych.
+
 
 ## Getting Started
 
@@ -62,29 +120,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
-## POLSKI
-
-# Projekt E-commerce z Next.js 13.4
-
- Ten projekt jest częścią kursu, w ramach którego miałem okazję zgłębić różne technologie i narzędzia związane z tworzeniem aplikacji internetowych. Głównym celem projektu było zrozumienie działania następujących technologii:
-
- - **Next.js:** Użyłem najnowszej wersji (13.4) Next.js, aby tworzyć zarówno stronę klienta, jak i serwerową.
-
- - **Prisma:** Wykorzystałem Prisma do zarządzania bazą danych, co pozwoliło mi efektywnie budować aplikację.
-
- - **app router:** Zaimplementowałem nowy app router, aby zapewnić nawigację w aplikacji.
-
- - **Next-Auth:** Zajmowałem się bezpieczeństwem użytkownika, korzystając z Next-Auth oraz autoryzacji przez Google.
-
- - **MongoDB:** Wybrałem MongoDB jako bazę danych dla projektu.
-
- - **Vercel:** Wdrożyłem projekt na platformę Vercel, aby był dostępny dla użytkowników.
-
- - **TailwindCSS i DaisyUI:** Poprawiłem UX, projektując responsywne i estetyczne UI.
-
- - **React cache:** Optymalizowałem zapytania do bazy danych z wykorzystaniem React cache.
-
- - **Narzędzia deweloperskie:** Skonfigurowałem różne narzędzia, które ułatwiły mi pracę podczas tworzenia projektu.
-
- Ten projekt ma na celu nie tylko wykazanie moich umiejętności w zakresie tworzenia aplikacji internetowych, ale również naukę i eksperymentowanie z nowymi technologiami. Jestem gotów na dalszy rozwój i ulepszanie tego projektu, a także na dalsze wyzwania związane z programowaniem i projektowaniem aplikacji webowych.
